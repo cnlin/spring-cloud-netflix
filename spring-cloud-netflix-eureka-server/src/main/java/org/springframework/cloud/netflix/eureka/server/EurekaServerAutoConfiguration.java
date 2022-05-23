@@ -74,6 +74,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @author Biju Kunjummen
  * @author Fahim Farook
  */
+// 此类注入的均为普通 Bean
 @Configuration(proxyBeanMethods = false)
 @Import(EurekaServerInitializerConfiguration.class)
 @ConditionalOnBean(EurekaServerMarkerConfiguration.Marker.class)

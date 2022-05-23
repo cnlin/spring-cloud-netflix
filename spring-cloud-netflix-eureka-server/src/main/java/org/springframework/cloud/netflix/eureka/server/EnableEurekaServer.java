@@ -36,6 +36,7 @@ import org.springframework.context.annotation.Import;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
+// 导入标识，AutoConfig 只有存在此标识才启用
 @Import(EurekaServerMarkerConfiguration.class)
 public @interface EnableEurekaServer {
 

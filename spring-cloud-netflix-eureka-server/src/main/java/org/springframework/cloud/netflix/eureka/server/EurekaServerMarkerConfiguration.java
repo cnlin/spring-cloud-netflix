@@ -20,8 +20,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Responsible for adding in a marker bean to activate
+ * Responsible for adding in a marker bean to activate（激活）
  * {@link EurekaServerAutoConfiguration}.
+ * proxyBeanMethods 标识此 Bean 不需要被 Configuration 生成代理对象，相当于普通的 @Component
  *
  * @author Biju Kunjummen
  */

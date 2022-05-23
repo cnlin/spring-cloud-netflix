@@ -90,6 +90,7 @@ public class EurekaInstanceConfigBean implements CloudEurekaInstanceConfig, Envi
 	private boolean securePortEnabled;
 
 	/**
+	 * eureka 客户端向服务器发送心跳的频率。<br/>
 	 * Indicates how often (in seconds) the eureka client needs to send heartbeats to
 	 * eureka server to indicate that it is still alive. If the heartbeats are not
 	 * received for the period specified in leaseExpirationDurationInSeconds, eureka
@@ -102,6 +103,7 @@ public class EurekaInstanceConfigBean implements CloudEurekaInstanceConfig, Envi
 	private int leaseRenewalIntervalInSeconds = 30;
 
 	/**
+	 * Eureka 服务端收到最后一次心跳后，如果在此时间内没有再收到心跳，则从视图移除实例并禁止流量流入该实例。
 	 * Indicates the time in seconds that the eureka server waits since it received the
 	 * last heartbeat before it can remove this instance from its view and there by
 	 * disallowing traffic to this instance.
