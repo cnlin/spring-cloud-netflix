@@ -242,6 +242,12 @@ public class EurekaServerAutoConfiguration extends WebMvcConfigurerAdapter {
 				registry, peerEurekaNodes, this.applicationInfoManager);
 	}
 
+	/**
+	 * 自动配置注入
+	 * @param registry
+	 * @param serverContext
+	 * @return
+	 */
 	@Bean
 	public EurekaServerBootstrap eurekaServerBootstrap(PeerAwareInstanceRegistry registry,
 			EurekaServerContext serverContext) {

@@ -49,6 +49,9 @@ public class EurekaServerInitializerConfiguration
 	@Autowired
 	private ApplicationContext applicationContext;
 
+	/**
+	 * 自动配置注入：EurekaServerAutoConfiguration#eurekaServerBootstrap(PeerAwareInstanceRegistry,EurekaServerContext)
+	 */
 	@Autowired
 	private EurekaServerBootstrap eurekaServerBootstrap;
 
@@ -61,6 +64,9 @@ public class EurekaServerInitializerConfiguration
 		this.servletContext = servletContext;
 	}
 
+	/**
+	 * Spring 的生命周期钩子
+	 */
 	@Override
 	public void start() {
 		new Thread(new Runnable() {
