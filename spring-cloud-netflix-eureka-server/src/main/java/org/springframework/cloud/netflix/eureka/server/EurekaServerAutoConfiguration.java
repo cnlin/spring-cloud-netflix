@@ -172,6 +172,8 @@ public class EurekaServerAutoConfiguration implements WebMvcConfigurer {
 	@ConditionalOnMissingBean
 	public EurekaServerContext eurekaServerContext(ServerCodecs serverCodecs,
 			PeerAwareInstanceRegistry registry, PeerEurekaNodes peerEurekaNodes) {
+		// 创建默认的 EurekaServerContext（ 作为一个 SpringBean，其将被触发 PostConstruct）
+		// PostConstruct 将对 EurekaNode 集合元素逐个 start
 		return new DefaultEurekaServerContext(this.eurekaServerConfig, serverCodecs,
 				registry, peerEurekaNodes, this.applicationInfoManager);
 	}

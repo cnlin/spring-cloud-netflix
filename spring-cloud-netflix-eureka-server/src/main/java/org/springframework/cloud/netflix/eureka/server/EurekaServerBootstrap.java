@@ -48,6 +48,9 @@ public class EurekaServerBootstrap {
 
 	private static final String ARCHAIUS_DEPLOYMENT_ENVIRONMENT = "archaius.deployment.environment";
 
+	/**
+	 * Netflix Archaius 是一个配置管理库
+	 */
 	private static final String EUREKA_ENVIRONMENT = "eureka.environment";
 
 	private static final String DEFAULT = "default";
@@ -58,6 +61,12 @@ public class EurekaServerBootstrap {
 
 	protected EurekaServerConfig eurekaServerConfig;
 
+	/**
+	 * 此类初始化了 Eureka Server注册相关 和 被其他组件发现的 信息
+	 * 注册相关的信息由用户通过 EurekaInstanceConfig 规范提供。
+	 * AwsClient 可使用或继承 CloudInstanceConfig。
+	 * 非 Aws 客户则可使用或继承 MyDataCenterInstanceConfig 或基类：AbstractInstanceConfig。
+	 */
 	protected ApplicationInfoManager applicationInfoManager;
 
 	protected EurekaClientConfig eurekaClientConfig;
